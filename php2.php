@@ -20,6 +20,10 @@ class Vertebrato
 {
     public function __construct()
     {
+        $this->stampaVertebrato();
+    }
+    
+    protected function stampaVertebrato(){
         echo "Sono un animale Vertebrato\n";
     }
 }
@@ -29,6 +33,10 @@ class SangueCaldo extends Vertebrato
     public function __construct()
     {
         parent::__construct();
+        $this->stampaSangueCaldo();
+    }
+
+    protected function stampaSangueCaldo(){
         echo "Sono un animale a Sangue Caldo\n";
     }
 }
@@ -38,6 +46,10 @@ class SangueFreddo extends Vertebrato
     public function __construct()
     {
         parent::__construct();
+        $this->stampaSangueFreddo();
+        
+    }
+    protected function stampaSangueFreddo(){
         echo "Sono un animale a Sangue Freddo\n";
     }
 }
@@ -48,6 +60,10 @@ class Mammifero extends SangueCaldo
     public function __construct()
     {
         parent::__construct();
+        $this->stampaMammifero();
+    }
+
+    protected function stampaMammifero(){
         echo "Sono un Mammifero\n";
     }
 }
@@ -57,6 +73,9 @@ class Uccello extends SangueCaldo
     public function __construct()
     {
         parent::__construct();
+        $this->stampaUccello();
+    }
+    protected function stampaUccello(){
         echo "Sono un Uccello\n";
     }
 }
@@ -66,6 +85,9 @@ class Anfibio extends SangueFreddo
     public function __construct()
     {
         parent::__construct();
+        $this->stampaAnfibio();
+    }
+    protected function stampaAnfibio(){
         echo "Sono un Anfibio\n";
     }
 }
@@ -75,6 +97,9 @@ class Rettile extends SangueFreddo
     public function __construct()
     {
         parent::__construct();
+        $this->stampaRettile();
+    }
+    protected function stampaRettile(){
         echo "Sono un Rettile\n";
     }
 }
@@ -84,6 +109,9 @@ class Pesce extends SangueFreddo
     public function __construct()
     {
         parent::__construct();
+        $this->stampaPesce();
+    }
+    protected function stampaPesce(){
         echo "Sono un Pesce\n";
     }
 }
