@@ -15,3 +15,80 @@ Traccia 2:
     Sono un animale Vertebrato
     Sono un animale a Sangue Freddo
     Splash!*/
+
+class Vertebrato
+{
+    public function __construct()
+    {
+        echo "Sono un animale Vertebrato\n";
+    }
+}
+
+class SangueCaldo extends Vertebrato
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un animale a Sangue Caldo\n";
+    }
+}
+
+class SangueFreddo extends Vertebrato
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un animale a Sangue Freddo\n";
+    }
+}
+
+
+class Mammifero extends SangueCaldo
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un Mammifero\n";
+    }
+}
+
+class Uccello extends SangueCaldo
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un Uccello\n";
+    }
+}
+
+class Anfibio extends SangueFreddo
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un Anfibio\n";
+    }
+}
+
+class Rettile extends SangueFreddo
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un Rettile\n";
+    }
+}
+
+class Pesce extends SangueFreddo
+{
+    public function __construct()
+    {
+        parent::__construct();
+        echo "Sono un Pesce\n";
+    }
+}
+
+
+$magikarp=new Pesce();
+
+$simba=new Mammifero();
